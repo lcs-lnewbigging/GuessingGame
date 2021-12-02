@@ -38,7 +38,7 @@ struct GuessingGameView: View {
                 }, label: {
                     Text("Submit Guess")
                 })
-                                
+                    .buttonStyle(.bordered)
             
             
             
