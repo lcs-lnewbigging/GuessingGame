@@ -12,6 +12,13 @@ struct GuessingGameView: View {
     // Current Guess of the user
     @State var currentGuess: Double = 50.0
     
+    //The  Target that we are trying to guess
+    //Will produce an interger in the range 1 to 100
+    let target = Int.random(in: 1...100)
+    
+    //The Feed back to thte user as they play
+    
+    @State var feedback = ""  // No Hint to start the game
     
     //MARK: Computer Properties
     var body: some View {
@@ -20,7 +27,8 @@ struct GuessingGameView: View {
                 
             
                 Label("PLay The Guessing Game!", systemImage: "gamecontroller")
-                
+                    .padding(20)
+               
                 Slider(value: $currentGuess,
                        in: 0.0...100.0,
                        label: {
@@ -33,7 +41,9 @@ struct GuessingGameView: View {
                     Text("100")
                 })
                     .padding(10)
-                Text("Your Guess")
+                
+                Text("Your Guess:")
+                    .bold()
                 
                 Text("\(String(format: "%.0f", currentGuess))")
                     .bold()
@@ -42,14 +52,34 @@ struct GuessingGameView: View {
                 
                 
                 Button(action: {
-                    print("Button was pressed")
+                    
+                    // Male the users guess into an interger
+                    let currentGuessAsInterger = Int(currentGuess)
+                    
+                    //compare the user's current guess to the target
+                    if currentGuessAsInterger < target{
+                        //Guess Higher
+                    feedback = "Guess higher next time!"
+                    }else if currentGuessAsInterger > target{
+                        feedback = " Guess lower next time!"
+                    }else {
+                        feedback = " You Got It!!"
+                    }
+                    
+                    
+                    
+                    
                 }, label: {
                     Text("Submit Guess")
                 })
-                    .buttonStyle(.bordered)
+                    .buttonStyle(.borderedProminent)
+                    
+            Text("The Target is \(target)")
+                    .padding(10)
             
-            
-            
+                Text(feedback)
+                    .italic()
+                    .padding()
             
             }
             .navigationTitle("Guessing Game")
