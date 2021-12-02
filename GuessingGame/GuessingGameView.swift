@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct GuessingGameView: View {
+    //MARK: Stored Properties
+    // Current Guess of the user
+    @State var currentGuess: Double = 50.0
+    
+    
+    //MARK: Computer Properties
     var body: some View {
         ScrollView{
             VStack{
-                Text("Play The Guessing Game!")
+                
             
+                Label("PLay The Guessing Game!", systemImage: "gamecontroller")
                 
-                
-                Slider(value: .constant(50.0),
+                Slider(value: $currentGuess,
                        in: 0.0...100.0,
                        label: {
                     Text("Opacity")
@@ -27,13 +33,15 @@ struct GuessingGameView: View {
                     Text("100")
                 })
                     .padding(10)
+                Text("Your Guess")
                 
-                Text("50")
+                Text("\(String(format: "%.0f", currentGuess))")
                     .bold()
                     .font(.title2)
                     .padding(10)
+                
+                
                 Button(action: {
-                    
                     print("Button was pressed")
                 }, label: {
                     Text("Submit Guess")
