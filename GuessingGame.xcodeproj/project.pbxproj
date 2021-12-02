@@ -11,6 +11,7 @@
 		FE8C01B427590AF7007C9C62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C01B327590AF7007C9C62 /* ContentView.swift */; };
 		FE8C01B627590AFC007C9C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8C01B527590AFC007C9C62 /* Assets.xcassets */; };
 		FE8C01B927590AFC007C9C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8C01B827590AFC007C9C62 /* Preview Assets.xcassets */; };
+		FE8C01C027590B19007C9C62 /* GuessingGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8C01BF27590B19007C9C62 /* GuessingGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		FE8C01B327590AF7007C9C62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE8C01B527590AFC007C9C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE8C01B827590AFC007C9C62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE8C01BF27590B19007C9C62 /* GuessingGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessingGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				FE8C01B127590AF7007C9C62 /* GuessingGameApp.swift */,
 				FE8C01B327590AF7007C9C62 /* ContentView.swift */,
+				FE8C01BF27590B19007C9C62 /* GuessingGameView.swift */,
 				FE8C01B527590AFC007C9C62 /* Assets.xcassets */,
 				FE8C01B727590AFC007C9C62 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				FE8C01B427590AF7007C9C62 /* ContentView.swift in Sources */,
 				FE8C01B227590AF7007C9C62 /* GuessingGameApp.swift in Sources */,
+				FE8C01C027590B19007C9C62 /* GuessingGameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
